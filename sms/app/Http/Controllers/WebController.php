@@ -61,6 +61,6 @@ class WebController extends Controller
 
         Mail::to($request->email)->send(new EnrollConfirmationMail($this->data));
 
-        return redirect('/course-detail/',$id)->with('message','Registration successfully complete');
+        return redirect('/course-detail/'.$id)->with('message','Registration successfully complete');
     }
 }
